@@ -1,4 +1,4 @@
-### Esta es una aplicación CRUD de tareas mediante linea de comandos ###
+### This is a TO DO task application using command line interface ###
 
 Module installation:
 
@@ -15,10 +15,10 @@ node app.js --help
 Available commands:
 
 ```shell
-crear       Crear una tarea por hacer
-listar      Lista las tareas existentes
-actualizar  Actualiza una tarea
-borrar      Elimina una tarea
+create      Creates a new task
+list        List all tasks
+update      Updates a task
+remove      Removes a task
 ```
 
 This app uses <a href="https://www.npmjs.com/package/colors">Colors</a> package to display Tasks in an user-friendly manner.
@@ -28,23 +28,29 @@ This app uses <a href="https://www.npmjs.com/package/colors">Colors</a> package 
 - List all tasks:
 
 ```shell
-node app.js listar
+node app.js list
 
-=========TAREA==========
-Aprender nodejs
-Estado: false
+=========TASK==========
+'Learn nodejs'
+State: false
 =========================
 =========TAREA==========
-Comer
-Estado: true
+Run
+State: true
 =========================
 ```
 
 - Create new task:
 
 ```shell
-node app.js crear -d "Test 2024"
+node app.js create -d "Test 2024"
 
-{ descripcion: 'Test 2024', completado: false }
-Datos enviados al archivo con éxito
+{ description: 'Test 2024', completed: false }
+Data successfully sent
+```
+
+- Update a task:
+
+```sh
+node app.js update -d "Run" -c true
 ```
